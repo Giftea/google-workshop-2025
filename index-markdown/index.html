@@ -26,26 +26,32 @@
                   id="index-markdown"
                   title="An Introduction to Google AI Studio and the Gemini API for Developers"
                   environment="web"
-                  feedback-link="https://github.com/Giftea">
+                  feedback-link="https://github.com/Giftea/google-workshop-2025">
     
       <google-codelab-step label="Welcome" duration="0">
         <p>In this hands-on workshop, we&#39;ll explore <strong>Google AI Studio</strong>, the easy way to prototype and interact with Google&#39;s powerful AI, and discuss the <strong>Gemini API</strong> that drives it. Gemini is Google&#39;s advanced, multimodal AI, capable of understanding diverse information like code and images, not just text.</p>
 <p>Our focus today is hands-on application: learning how these tools can help you write code faster, debug smarter, communicate clearer, and brainstorm better. By the end, you&#39;ll see how to effectively integrate AI into your development process to boost productivity and creativity.</p>
 <h2 is-upgraded>Google AI Studio</h2>
-<p><strong>Google AI Studio</strong> is a free, web-based tool for prototyping and deploying apps with Google&#39;s <strong>Gemini AI models</strong>. Key features:</p>
+<p><strong>Google AI Studio</strong> is a free, web-based tool that lets you easily experiment with and build applications using Google&#39;s powerful <strong>Gemini AI</strong> models.</p>
+<p>Think of it as a user-friendly playground for developers and enthusiasts alike. You can quickly prototype ideas, test different prompts, and even generate code to integrate the AI&#39;s capabilities into your own projects.</p>
+<p>Key features include the ability to:</p>
 <ul>
-<li><strong>Quick Access to Gemini</strong> – Test Gemini Pro &amp; Gemini 1.5 via a simple UI or API.</li>
-<li><strong>Prompt Crafting</strong> – Experiment with text, image, and multimodal inputs.</li>
-<li><strong>API Integration</strong> – Generate code snippets for easy app integration (REST or Python).</li>
-<li><strong>Free Tier</strong> – Limited usage at no cost (with Google account).</li>
+<li><strong>Chat with AI</strong>: Have conversations and test the model&#39;s responses.</li>
+<li><strong>Use different data types</strong>: Work with text, images, and other forms of data.</li>
+<li><strong>Fine-tune models</strong>: Customize the AI for your specific needs.</li>
+<li><strong>Get code</strong>: Easily generate the necessary code to use the AI in your applications.</li>
 </ul>
 <h2 is-upgraded>Gemini API</h2>
-<p>The Gemini API is Google&#39;s programming interface that lets developers integrate Gemini AI models (like Gemini 1.5 or Gemini Pro) into apps, websites, and services. It enables:</p>
+<p><strong>Gemini API</strong> is Google&#39;s programming interface that lets developers integrate Gemini AI models (like <strong>Gemini 2.5, Gemini 2.0, or Gemma</strong>) into apps, websites, and services. It enables:</p>
+<p class="image-container"><img alt="Gemini API" src="img/79c5fa549040992.jpeg"></p>
+<p>You can build apps that can:</p>
 <ul>
-<li>Text &amp; Multimodal AI (process images, audio, and video alongside text)</li>
-<li>Advanced Reasoning (complex Q&amp;A, code generation, data analysis)</li>
-<li>Custom AI Solutions (fine-tuning for specific tasks)</li>
+<li><strong>Understand and generate text:</strong> From writing emails to summarizing long documents.</li>
+<li><strong>Analyze images and videos:</strong> Identify objects, describe scenes, and answer questions about visual content.</li>
+<li><strong>Process audio:</strong> Transcribe spoken words and understand audio cues.</li>
+<li><strong>Write code:</strong> Generate code in various programming languages.</li>
 </ul>
+<p>Essentially, the Gemini API gives developers the tools to integrate the &#34;brain&#34; of Google&#39;s most advanced AI into their own creations.</p>
 
 
       </google-codelab-step>
@@ -132,6 +138,15 @@
 <p>This is where you can create content beyond text, select your model of choice, add a prompt and generate your media. The Imagen model can be used to to generate high quality images across multiple aspect ratios, while Veo can be used to animate images and create video clips.</p>
 <p class="image-container"><img alt="Generate Media" src="img/451b8aa3fdacc1c3.png"></p>
 <h2 is-upgraded>Build</h2>
+<p>This section is a developer-focused playground and workbench designed for prototyping and creating applications powered by Google&#39;s Gemini family of AI models.</p>
+<p>In essence, it&#39;s all about:</p>
+<ul>
+<li><strong>Rapid Experimentation:</strong> It allows developers to quickly start building by either describing an app in natural language (e.g., &#34;an image generator that uses imagen&#34;) or by starting from pre-built templates.</li>
+<li><strong>Showcasing Capabilities:</strong> The &#34;Showcase&#34; section features a gallery of ready-made example apps. This demonstrates the wide range of what&#39;s possible with Gemini, including: audio generation, image interaction and productivity tools.</li>
+<li><strong>Access to Multimodal Models:</strong> It provides access to a suite of different models tailored for specific tasks, such as <code>Gemini 2.5 Pro</code>, <code>Imagen</code> for images, and <code>Lyria</code> for music, allowing developers to use the best tool for the job.</li>
+<li><strong>Personal Workspace:</strong> It includes sections like &#34;Your apps&#34; and &#34;Recent apps,&#34; where users can save, manage, and continue working on their own creations within the studio.</li>
+</ul>
+<p>It&#39;s an interactive environment meant to lower the barrier to entry for AI development, enabling creators to easily explore, build, and test the advanced multimodal capabilities of Gemini.</p>
 <p class="image-container"><img alt="Build" src="img/47a4f5b760c6b4c0.png"></p>
 
 
@@ -160,14 +175,18 @@ print(divide(10, 0))
 - Model: &#39;Nexus 2024&#39;  
 - Key features: noise cancellation, 30-hour battery life, IPX5 waterproof  
 - Price range: mid-tier  
-
-Format your response as a valid JSON object with these exact keys:  
-{  
-  \&#34;product_name\&#34;: \&#34;string\&#34;,  
-  \&#34;brand\&#34;: \&#34;string\&#34;,  
-  \&#34;features\&#34;: [\&#34;array\&#34;, \&#34;of\&#34;, \&#34;strings\&#34;],  
-  \&#34;price_category\&#34;: \&#34;string\&#34;,  
-  \&#34;target_audience\&#34;: \&#34;string\&#34;  
+</code></pre>
+<p>Structured output JSON format:</p>
+<pre><code language="language-json" class="language-json">{
+  &#34;type&#34;: &#34;object&#34;,
+  &#34;properties&#34;: {
+    &#34;product_name&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;target_audience&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+  }
 }
 </code></pre>
 <h3 is-upgraded><strong>4. Grounding with Google Search</strong></h3>

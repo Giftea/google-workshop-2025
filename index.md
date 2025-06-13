@@ -4,7 +4,7 @@ id: index-markdown
 categories: codelab,markdown
 environments: Web
 status: Published
-feedback link: https://github.com/Giftea
+feedback link: https://github.com/Giftea/google-workshop-2025
 
 # An Introduction to Google AI Studio and the Gemini API for Developers
 
@@ -16,20 +16,32 @@ Our focus today is hands-on application: learning how these tools can help you w
 
 ### Google AI Studio
 
-**Google AI Studio** is a free, web-based tool for prototyping and deploying apps with Google’s **Gemini AI models**. Key features:
+**Google AI Studio** is a free, web-based tool that lets you easily experiment with and build applications using Google's powerful **Gemini AI** models.
 
-- **Quick Access to Gemini** – Test Gemini Pro & Gemini 1.5 via a simple UI or API.
-- **Prompt Crafting** – Experiment with text, image, and multimodal inputs.
-- **API Integration** – Generate code snippets for easy app integration (REST or Python).
-- **Free Tier** – Limited usage at no cost (with Google account).
+Think of it as a user-friendly playground for developers and enthusiasts alike. You can quickly prototype ideas, test different prompts, and even generate code to integrate the AI's capabilities into your own projects.
+
+Key features include the ability to:
+
+- **Chat with AI**: Have conversations and test the model's responses.
+- **Use different data types**: Work with text, images, and other forms of data.
+- **Fine-tune models**: Customize the AI for your specific needs.
+- **Get code**: Easily generate the necessary code to use the AI in your applications.
+
 
 ### Gemini API
 
-The Gemini API is Google's programming interface that lets developers integrate Gemini AI models (like Gemini 1.5 or Gemini Pro) into apps, websites, and services. It enables:
+**Gemini API** is Google's programming interface that lets developers integrate Gemini AI models (like **Gemini 2.5, Gemini 2.0, or Gemma**) into apps, websites, and services. It enables:
 
-- Text & Multimodal AI (process images, audio, and video alongside text)
-- Advanced Reasoning (complex Q&A, code generation, data analysis)
-- Custom AI Solutions (fine-tuning for specific tasks)
+![Gemini API](img/bridge.jpeg)
+
+You can build apps that can:
+
+* **Understand and generate text:** From writing emails to summarizing long documents.
+* **Analyze images and videos:** Identify objects, describe scenes, and answer questions about visual content.
+* **Process audio:** Transcribe spoken words and understand audio cues.
+* **Write code:** Generate code in various programming languages.
+
+Essentially, the Gemini API gives developers the tools to integrate the "brain" of Google's most advanced AI into their own creations.
 
 ## **Prerequisites**
 
@@ -116,6 +128,17 @@ This is where you can create content beyond text, select your model of choice, a
 
 ### Build
 
+This section is a developer-focused playground and workbench designed for prototyping and creating applications powered by Google's Gemini family of AI models.
+
+In essence, it's all about:
+
+* **Rapid Experimentation:** It allows developers to quickly start building by either describing an app in natural language (e.g., "an image generator that uses imagen") or by starting from pre-built templates.
+* **Showcasing Capabilities:** The "Showcase" section features a gallery of ready-made example apps. This demonstrates the wide range of what's possible with Gemini, including: audio generation, image interaction and productivity tools.
+* **Access to Multimodal Models:** It provides access to a suite of different models tailored for specific tasks, such as `Gemini 2.5 Pro`, `Imagen` for images, and `Lyria` for music, allowing developers to use the best tool for the job.
+* **Personal Workspace:** It includes sections like "Your apps" and "Recent apps," where users can save, manage, and continue working on their own creations within the studio.
+
+It's an interactive environment meant to lower the barrier to entry for AI development, enabling creators to easily explore, build, and test the advanced multimodal capabilities of Gemini.
+
 ![Build](img/build.png)
 
 ## Prompting
@@ -155,14 +178,20 @@ Generate a sample product description for a wireless Bluetooth headset with the 
 - Model: 'Nexus 2024'  
 - Key features: noise cancellation, 30-hour battery life, IPX5 waterproof  
 - Price range: mid-tier  
+```
 
-Format your response as a valid JSON object with these exact keys:  
-{  
-  \"product_name\": \"string\",  
-  \"brand\": \"string\",  
-  \"features\": [\"array\", \"of\", \"strings\"],  
-  \"price_category\": \"string\",  
-  \"target_audience\": \"string\"  
+Structured output JSON format:
+```json
+{
+  "type": "object",
+  "properties": {
+    "product_name": {
+      "type": "string"
+    },
+    "target_audience": {
+      "type": "string"
+    },
+  }
 }
 ```
 
