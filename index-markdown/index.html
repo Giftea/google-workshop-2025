@@ -1,0 +1,239 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>An Introduction to Google AI Studio and the Gemini API for Developers</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="index-markdown"
+                  title="An Introduction to Google AI Studio and the Gemini API for Developers"
+                  environment="web"
+                  feedback-link="https://github.com/Giftea">
+    
+      <google-codelab-step label="Welcome" duration="2">
+        <p>In this hands-on workshop, we&#39;ll explore <strong>Google AI Studio</strong>, the easy way to prototype and interact with Google&#39;s powerful AI, and discuss the <strong>Gemini API</strong> that drives it. Gemini is Google&#39;s advanced, multimodal AI, capable of understanding diverse information like code and images, not just text.</p>
+<p>Our focus today is hands-on application: learning how these tools can help you write code faster, debug smarter, communicate clearer, and brainstorm better. By the end, you&#39;ll see how to effectively integrate AI into your development process to boost productivity and creativity.</p>
+<h2 is-upgraded>Google AI Studio</h2>
+<p><strong>Google AI Studio</strong> is a free, web-based tool for prototyping and deploying apps with Google&#39;s <strong>Gemini AI models</strong>. Key features:</p>
+<ul>
+<li><strong>Quick Access to Gemini</strong> – Test Gemini Pro &amp; Gemini 1.5 via a simple UI or API.</li>
+<li><strong>Prompt Crafting</strong> – Experiment with text, image, and multimodal inputs.</li>
+<li><strong>API Integration</strong> – Generate code snippets for easy app integration (REST or Python).</li>
+<li><strong>Free Tier</strong> – Limited usage at no cost (with Google account).</li>
+</ul>
+<h2 is-upgraded>Gemini API</h2>
+<p>The Gemini API is Google&#39;s programming interface that lets developers integrate Gemini AI models (like Gemini 1.5 or Gemini Pro) into apps, websites, and services. It enables:</p>
+<ul>
+<li>Text &amp; Multimodal AI (process images, audio, and video alongside text)</li>
+<li>Advanced Reasoning (complex Q&amp;A, code generation, data analysis)</li>
+<li>Custom AI Solutions (fine-tuning for specific tasks)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Prerequisites" duration="1">
+        <ul>
+<li>A Google Account (for accessing <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>).</li>
+<li>Laptop with a modern web browser.</li>
+<li>Basic understanding of software development concepts. (No prior AI/ML experience required).</li>
+<li>A stable internet connection</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Exploring Google AI Studio" duration="0">
+        <p>Sign in with your Google account into <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a></p>
+<p class="image-container"><img alt="Google AI Studio Interface" src="img/6d4ecfc568218af1.png"></p>
+<p>The vertical panel on the left side of the interface is where you choose the type of prompt you want to create and access your past work.</p>
+<ul>
+<li><strong>Chat</strong>: This is the selected mode, designed for creating conversational AI experiences.</li>
+<li><strong>Stream</strong>: Stream real-time with Gemini.</li>
+<li><strong>Generate Media</strong>: A new feature for creating content beyond text.</li>
+<li><strong>Build</strong>: Build apps with Gemini.</li>
+<li><strong>History</strong>: This tab allows you to view and revisit your previously saved prompts and conversations.</li>
+</ul>
+<p class="image-container"><img alt="Prompt Interfaces" src="img/8245cae264ed5b44.jpg"></p>
+<h2 is-upgraded>Chat Prompt</h2>
+<p>This prompt interface is the primary space where you interact with the AI.</p>
+<ul>
+<li><strong>Prompt Input Box:</strong> This is where you type your instructions for the AI. To the right of the input box are buttons to add different types of input (like images, videos, files, audio) and the main <strong>Run</strong> button to send your prompt to the model.</li>
+</ul>
+<p class="image-container"><img alt="Google AI Studio Interface" src="img/6d4ecfc568218af1.png"></p>
+<p>The panel on the right gives you fine-grained control over how the AI model responds.</p>
+<ul>
+<li><strong>Model Selector:</strong> The dropdown at the top allows you to choose which AI model to use.</li>
+<li><strong>Token count:</strong> This shows the number of tokens your input is using out of the model&#39;s maximum context window.</li>
+<li><strong>Temperature:</strong> A slider that controls the randomness of the output. A lower temperature (closer to 0) makes the output more deterministic and focused, while a higher temperature (closer to 1) makes it more creative and diverse.</li>
+<li><strong>Thinking:</strong> This section includes a &#34;Thinking mode&#34; toggle and a &#34;Set thinking budget,&#34; which allows the model more processing time for complex queries.</li>
+<li><strong>Tools:</strong> This section allows you to give the model additional capabilities: <ul>
+<li><strong>Structured output:</strong> Guide the model to respond in a specific format (like JSON).</li>
+<li><strong>Code execution:</strong> Allow the model to run code to solve problems.</li>
+<li><strong>Function calling:</strong> Enable the model to interact with external tools and APIs.</li>
+<li><strong>Grounding with Google Search:</strong> Connect the model to Google Search to provide answers based on real-time, verifiable information from the web.</li>
+</ul>
+</li>
+<li><strong>URL context:</strong> Lets you provide a URL as context for your prompt.</li>
+<li><strong>Advanced settings:</strong> A collapsible menu for even more detailed configuration options.</li>
+</ul>
+<p class="image-container"><img alt="Run Settings" src="img/f78e2749897975bc.jpg"></p>
+<h2 is-upgraded>Stream Realtime</h2>
+<p>The stream interface enables live, real-time conversations with Gemini. It lets you use your voice, webcam, and screen for a direct, continuous, multimodal dialog.</p>
+<ul>
+<li><strong>Prompt/Input Area:</strong> A subtle input box says &#34;Start typing a prompt,&#34; but the primary focus is on the multimodal input buttons below it: <ul>
+<li><strong>Talk:</strong> Click this to use your microphone and speak directly to Gemini.</li>
+<li><strong>Webcam:</strong> Click this to activate your camera and provide visual input.</li>
+<li><strong>Share Screen:</strong> Click this to share your screen&#39;s content as a visual input for the model.</li>
+</ul>
+</li>
+<li><strong>Run Button:</strong> The &#34;Run&#34; button to the right initiates the interaction once your inputs are ready.</li>
+</ul>
+<p class="image-container"><img alt="Stream realtime" src="img/ddb87dc42a9dc852.png"></p>
+<p>The right panel contains a new set of controls specifically tailored for the &#34;Stream Realtime&#34; audio dialog mode.</p>
+<ul>
+<li><strong>Output format:</strong> Output format the model should respond with.</li>
+<li><strong>Voice:</strong> A dropdown menu lets you choose the AI&#39;s voice persona.</li>
+<li><strong>Media resolution:</strong> This controls the quality (and token cost) of any visual information sent to the model.</li>
+<li><strong>Advanced Conversational Toggles:</strong><ul>
+<li><strong>Turn coverage:</strong> Keeps audio and video active even when no speech is detected.</li>
+<li><strong>Affective dialog:</strong> Adjusts responses based on the user&#39;s tone and expression.</li>
+<li><strong>Proactive audio:</strong> Ignores audio that isn&#39;t relevant to the conversation.</li>
+</ul>
+</li>
+<li><strong>Session Context:</strong> Uses a sliding window to trim older messages and manage chat history automatically.</li>
+<li><strong>Tools:</strong><ul>
+<li><strong>Function calling:</strong> Allows the model to use external tools or APIs to perform actions or get information.</li>
+<li><strong>Automatic Function Response:</strong> Allows the model to automatically execute a function call without waiting for explicit user approval.</li>
+</ul>
+</li>
+</ul>
+<p class="image-container"><img alt="Stream realtime" src="img/4c6cd2b1373504a9.jpg"></p>
+<h2 is-upgraded>Generate Media</h2>
+<p>This is where you can create content beyond text, select your model of choice, add a prompt and generate your media. The Imagen model can be used to to generate high quality images across multiple aspect ratios, while Veo can be used to animate images and create video clips.</p>
+<p class="image-container"><img alt="Generate Media" src="img/451b8aa3fdacc1c3.png"></p>
+<h2 is-upgraded>Build</h2>
+<p class="image-container"><img alt="Build" src="img/47a4f5b760c6b4c0.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Prompting" duration="0">
+        <h3 is-upgraded><strong>1. Basic Code Generation</strong></h3>
+<p><strong>Prompt:</strong></p>
+<pre><code language="language-md" class="language-md">Write a Python function that prints &#34;Hello World!&#34;
+</code></pre>
+<h3 is-upgraded><strong>2. Debugging + Error Explanation</strong></h3>
+<p><strong>Prompt:</strong></p>
+<pre><code language="language-md" class="language-md">Explain the error in this Python code and fix it:
+
+def divide(a, b):
+    return a / b
+
+print(divide(10, 0))
+</code></pre>
+<h3 is-upgraded><strong>3. Structured Output</strong></h3>
+<p>Turn on the <strong>Structured Output</strong> tool.</p>
+<p class="image-container"><img alt="Structured Output" src="img/f345fba70503b956.jpg"></p>
+<p><strong>Prompt:</strong></p>
+<pre><code language="language-md" class="language-md">Generate a sample product description for a wireless Bluetooth headset with the following specifications:  
+- Brand: &#39;AudioPro&#39;  
+- Model: &#39;Nexus 2024&#39;  
+- Key features: noise cancellation, 30-hour battery life, IPX5 waterproof  
+- Price range: mid-tier  
+
+Format your response as a valid JSON object with these exact keys:  
+{  
+  \&#34;product_name\&#34;: \&#34;string\&#34;,  
+  \&#34;brand\&#34;: \&#34;string\&#34;,  
+  \&#34;features\&#34;: [\&#34;array\&#34;, \&#34;of\&#34;, \&#34;strings\&#34;],  
+  \&#34;price_category\&#34;: \&#34;string\&#34;,  
+  \&#34;target_audience\&#34;: \&#34;string\&#34;  
+}
+</code></pre>
+<h3 is-upgraded><strong>4. Grounding with Google Search</strong></h3>
+<p><strong>Prompt:</strong></p>
+<pre><code>Whats the latest React version?
+</code></pre>
+<p>Outdated result:</p>
+<p class="image-container"><img alt="Outdated result" src="img/a0b75154c34b0c1e.png"></p>
+<p>Turn on <strong>Grounding with Google Search</strong> tool.</p>
+<p class="image-container"><img alt="Grounding with Google Search" src="img/dd67116c9b0250ad.jpg"></p>
+<p>Updated result:</p>
+<p class="image-container"><img alt="Updated result" src="img/765f12042bbe604c.jpg"></p>
+<h3 is-upgraded>5. Image and Text Prompt</h3>
+<p>Prompt:</p>
+<pre><code language="language-md" class="language-md">Explain this Python TypeError and provide a step-by-step fix. 
+
+Code:
+
+ratings = [4, 5, &#34;3&#34;, 4, 2]
+
+total = sum(ratings)
+average = total / len(ratings)
+
+print(f&#34;Average rating: {average:.1f}/5&#34;)
+</code></pre>
+<p>Upload the CLI error image</p>
+<p class="image-container"><img alt="code error" src="img/54cd80ecccc3c22d.jpg"></p>
+<h3 is-upgraded><strong>6. Using System Instructions</strong></h3>
+<p>System Instruction:</p>
+<pre><code language="language-md" class="language-md">You are a computer programming instructor
+</code></pre>
+<p class="image-container"><img alt="System Instruction" src="img/bcef007b29b654ca.jpg"></p>
+<p><strong>Prompt:</strong></p>
+<pre><code>Explain computer programming to a high school student
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Build an AI Recipe Generator" duration="0">
+        <p>Prompt:</p>
+<pre><code language="language-md" class="language-md">Build a recipe generator app that takes a list of ingredients and generates a recipe with visually appealing images.
+</code></pre>
+<p>After the model generates the app, you can add new features to the app and also inspect the code. <img alt="code" src="img/491cd850de6a880a.png"></p>
+<p>This is the final product the model generated:</p>
+<p class="image-container"><img alt="Build an AI Recipe Generator" src="img/c3673111dfa08469.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conclusion" duration="0">
+        <p>In this hands-on session, we explored Google AI Studio and the Gemini API. We started by exploring the AI Studio interface, learning how to fine-tune models and adjust settings for optimal results. Through practical exercises, we mastered various prompting techniques, from basic queries to advanced multimodal inputs.</p>
+<p>The highlight was building our AI recipe generator, taking ingredients as input and generating complete recipes with visual appeal. This demonstrated Gemini&#39;s capabilities in content creation and API integration.</p>
+<p>Remember: effective prompting and proper model configuration are key to unlocking Gemini&#39;s full potential. We encourage you to apply these techniques to your own projects.</p>
+<p>For further learning, visit the <a href="https://ai.google.dev/" target="_blank">Gemini API documentation</a> and continue experimenting in <a href="https://aistudio.google.com" target="_blank">AI Studio</a>.</p>
+<p>Thank you for participating!</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

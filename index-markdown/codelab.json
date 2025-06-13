@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-06-13T09:30:26+01:00",
+  "id": "index-markdown",
+  "duration": 3,
+  "title": "An Introduction to Google AI Studio and the Gemini API for Developers",
+  "summary": "An Introduction to Google AI Studio and the Gemini API for Developers",
+  "source": "index.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/Giftea",
+  "url": "index-markdown"
+}
