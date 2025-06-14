@@ -49,7 +49,6 @@ Before starting this workshop, ensure you have:
 
 - A Google Account (for accessing [Google AI Studio](https://aistudio.google.com/)).
 - Laptop with a modern web browser.
-- Basic understanding of software development concepts. (No prior AI/ML experience required).
 - A stable internet connection
 
 ## Exploring Google AI Studio
@@ -164,7 +163,21 @@ def divide(a, b):
 print(divide(10, 0))
 ```
 
-#### **3. Structured Output**
+#### 3 Temperature Setting
+
+**Prompt with temperature set at 0:**
+
+```md
+Generate 5 names for a brand of coffee that is exclusively for software developers.
+```
+
+**Prompt with temperature set at 2:**
+```md
+Generate 5 names for a brand of coffee that is exclusively for software developers.
+```
+
+
+#### **4. Structured Output**
 
 Turn on the **Structured Output** tool.
 
@@ -195,7 +208,7 @@ Structured output JSON format:
 }
 ```
 
-#### **4. Grounding with Google Search**
+#### **5. Grounding with Google Search**
 
 **Prompt:**
 
@@ -215,32 +228,20 @@ Updated result:
 
 ![Updated result](img/update.jpg)
 
-#### 5. Image and Text Prompt
+#### 6. Image and Text Prompt
 
-Prompt:
+Choose a random image and prompt:
+
 ```md
-Explain this Python TypeError and provide a step-by-step fix. 
-
-Code:
-
-ratings = [4, 5, "3", 4, 2]
-
-total = sum(ratings)
-average = total / len(ratings)
-
-print(f"Average rating: {average:.1f}/5")
+Can you summarize what is in the this image?
 ```
-
-Upload the CLI error image
-
-![code error](img/error-code.jpg)
 
 #### **6. Using System Instructions**
 
 System Instruction:
 
 ```md
-You are a computer programming instructor
+You're a sarcastic joker
 ```
 
 ![System Instruction](img/sys-instructions.jpg)
@@ -248,7 +249,7 @@ You are a computer programming instructor
 **Prompt:**
 
 ```
-Explain computer programming to a high school student
+What is photosynthesis?
 ```
 
 ## Build an AI Recipe Generator
