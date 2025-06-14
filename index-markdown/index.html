@@ -61,7 +61,6 @@
 <ul>
 <li>A Google Account (for accessing <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>).</li>
 <li>Laptop with a modern web browser.</li>
-<li>Basic understanding of software development concepts. (No prior AI/ML experience required).</li>
 <li>A stable internet connection</li>
 </ul>
 
@@ -166,7 +165,14 @@ def divide(a, b):
 
 print(divide(10, 0))
 </code></pre>
-<h3 is-upgraded><strong>3. Structured Output</strong></h3>
+<h3 is-upgraded>3 Temperature Setting</h3>
+<p><strong>Prompt with temperature set at 0:</strong></p>
+<pre><code language="language-md" class="language-md">Generate 5 names for a brand of coffee that is exclusively for software developers.
+</code></pre>
+<p><strong>Prompt with temperature set at 2:</strong></p>
+<pre><code language="language-md" class="language-md">Generate 5 names for a brand of coffee that is exclusively for software developers.
+</code></pre>
+<h3 is-upgraded><strong>4. Structured Output</strong></h3>
 <p>Turn on the <strong>Structured Output</strong> tool.</p>
 <p class="image-container"><img alt="Structured Output" src="img/f345fba70503b956.jpg"></p>
 <p><strong>Prompt:</strong></p>
@@ -189,7 +195,7 @@ print(divide(10, 0))
   }
 }
 </code></pre>
-<h3 is-upgraded><strong>4. Grounding with Google Search</strong></h3>
+<h3 is-upgraded><strong>5. Grounding with Google Search</strong></h3>
 <p><strong>Prompt:</strong></p>
 <pre><code>Whats the latest React version?
 </code></pre>
@@ -199,28 +205,17 @@ print(divide(10, 0))
 <p class="image-container"><img alt="Grounding with Google Search" src="img/dd67116c9b0250ad.jpg"></p>
 <p>Updated result:</p>
 <p class="image-container"><img alt="Updated result" src="img/765f12042bbe604c.jpg"></p>
-<h3 is-upgraded>5. Image and Text Prompt</h3>
-<p>Prompt:</p>
-<pre><code language="language-md" class="language-md">Explain this Python TypeError and provide a step-by-step fix. 
-
-Code:
-
-ratings = [4, 5, &#34;3&#34;, 4, 2]
-
-total = sum(ratings)
-average = total / len(ratings)
-
-print(f&#34;Average rating: {average:.1f}/5&#34;)
+<h3 is-upgraded>6. Image and Text Prompt</h3>
+<p>Choose a random image and prompt:</p>
+<pre><code language="language-md" class="language-md">Can you summarize what is in the this image?
 </code></pre>
-<p>Upload the CLI error image</p>
-<p class="image-container"><img alt="code error" src="img/54cd80ecccc3c22d.jpg"></p>
 <h3 is-upgraded><strong>6. Using System Instructions</strong></h3>
 <p>System Instruction:</p>
-<pre><code language="language-md" class="language-md">You are a computer programming instructor
+<pre><code language="language-md" class="language-md">You&#39;re a sarcastic joker
 </code></pre>
 <p class="image-container"><img alt="System Instruction" src="img/bcef007b29b654ca.jpg"></p>
 <p><strong>Prompt:</strong></p>
-<pre><code>Explain computer programming to a high school student
+<pre><code>What is photosynthesis?
 </code></pre>
 
 
