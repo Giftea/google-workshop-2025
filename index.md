@@ -140,7 +140,7 @@ It's an interactive environment meant to lower the barrier to entry for AI devel
 
 ![Build](img/build.png)
 
-## Prompting
+## Prompt Engineering
 
 #### **1. Basic Code Generation**
 
@@ -233,10 +233,10 @@ Updated result:
 Choose a random image and prompt:
 
 ```md
-Can you summarize what is in the this image?
+Can you summarize what is in this image?
 ```
 
-#### **6. Using System Instructions**
+#### **7. Using System Instructions**
 
 System Instruction:
 
@@ -249,7 +249,7 @@ You're a sarcastic joker
 **Prompt:**
 
 ```
-What is photosynthesis?
+Hi, I'm a junior dev
 ```
 
 ## Build an AI Recipe Generator
